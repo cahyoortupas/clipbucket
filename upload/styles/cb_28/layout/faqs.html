@@ -1,0 +1,15 @@
+<div id="main" class="clearfix container">
+    <div class="cb-box clearfix row">
+        <h1>Frequently Asked Questions (FAQs)</h1>
+        {if $faqs}
+            {foreach from=$faqs item=faq}
+                <h3>{$faq.question}</h3>
+                <ul>
+                    <li><strong>Answer:</strong> {$faq.answer}</li>
+                </ul>
+            {/foreach}
+        {else}
+            <p>No FAQs available at the moment.</p>
+        {/if}
+    </div>
+</div>

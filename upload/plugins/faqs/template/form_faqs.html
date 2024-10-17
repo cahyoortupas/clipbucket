@@ -1,0 +1,24 @@
+<h2>FAQs</h2>
+<table style="width:100%;">
+	<tr>
+		<td>
+			<form id="form1" name="form1" method="post">
+				<label for="question">Question</label>
+				<textarea name="question" class="page_content" cols="75" rows="6">{$faq_data.question|default:''}</textarea>
+				<br/>
+				<label for="answer">Answer</label>
+				<textarea name="answer" class="page_content" cols="75" rows="6">{$faq_data.answer|default:''}</textarea>
+				<br/>
+				<label for="sort">Sort</label>
+				<input type="number" name="sort" value="{$faq_data.sort|default:''}">
+				<br/>
+				<input type="submit" class="btn btn-primary btn-xs" name="update" value="{lang code='update'}"/>
+			</form>
+		</td>
+	</tr>
+</table>
+<script>
+    $(document).ready(function() {
+        $('.page_content').summernote();
+    });
+</script>
